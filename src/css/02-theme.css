@@ -41,6 +41,8 @@
     --lm-radius-lg: 0.75rem;
     --lm-radius-full: 9999px;
 
+    --lm-bar-height: 0.5rem;
+
     --lm-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --lm-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 

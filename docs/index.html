@@ -66,6 +66,7 @@
           <a href="#alerts">Alerts</a>
           <a href="#badges">Badges</a>
           <a href="#progress">Progress</a>
+          <a href="#meter">Meter</a>
           <a href="#accordion">Accordion</a>
           <a href="#tabs">Tabs</a>
           <a href="#dialog">Dialog</a>
@@ -357,8 +358,8 @@
         <h2>Progress & Spinner</h2>
 
         <h3>Progress Bar</h3>
-        <progress value="60" max="100" style="margin-bottom: var(--lm-space-4);"></progress>
-        <progress value="30" max="100" style="margin-bottom: var(--lm-space-4);"></progress>
+        <progress value="60" max="100"></progress>
+        <progress value="30" max="100"></progress>
         <progress value="90" max="100"></progress>
 
         <h3>Spinner</h3>
@@ -367,6 +368,18 @@
           <div class="spinner"></div>
           <div class="spinner lg"></div>
         </div>
+      </section>
+
+      <!-- Meter -->
+      <section id="meter" class="demo-section">
+        <h2>Meter</h2>
+        <p>Use <code>&lt;meter&gt;</code> for scalar measurements within a range.
+          Colors indicate optimum (green), sub-optimum (yellow), and poor (red) states.
+        </p>
+
+        <meter value="0.8" min="0" max="1" low="0.3" high="0.7" optimum="1"></meter>
+        <meter value="0.5" min="0" max="1" low="0.3" high="0.7" optimum="1"></meter>
+        <meter value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1"></meter>
       </section>
 
       <!-- Accordion -->
