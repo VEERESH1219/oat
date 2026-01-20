@@ -50,7 +50,7 @@
     max-width: 28rem;
     min-width: 20rem;
     pointer-events: auto;
-    background-color: var(--lm-background);
+    background-color: var(--lm-card);
     border: 1px solid var(--lm-border);
     border-left-width: var(--lm-space-3);
     border-left-style: solid;

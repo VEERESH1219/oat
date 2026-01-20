@@ -8,7 +8,7 @@
     max-height: 85vh;
     margin: auto;
     padding: 0;
-    background-color: var(--lm-background);
+    background-color: var(--lm-card);
     border: 1px solid var(--lm-border);
     border-radius: var(--lm-radius-medium);
     box-shadow: var(--lm-shadow-large);
