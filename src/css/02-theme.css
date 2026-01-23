@@ -1,13 +1,14 @@
 @layer theme {
   :root {
+    /* Default light theme variables */
     --background: #fff;
     --foreground: #09090b;
     --card: #fff;
     --card-foreground: #09090b;
-    --primary: #18181b;
+    --primary: #574747;
     --primary-foreground: #fafafa;
     --secondary: #f4f4f5;
-    --secondary-foreground: #18181b;
+    --secondary-foreground: #574747;
     --muted: #f4f4f5;
     --muted-foreground: #71717a;
     --faint: #fafafa;
@@ -20,8 +21,9 @@
     --warning-foreground: #09090b;
     --border: #d4d4d8;
     --input: #d4d4d8;
-    --ring: #18181b;
+    --ring: #574747;
 
+    /* ==================== */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 0.75rem;
