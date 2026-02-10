@@ -84,6 +84,13 @@
       }
     }
 
+    .features {
+      display: grid;
+      gap: var(--space-8);
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: var(--space-12);
+    }
+
     .main-sidebar {
       .logo {
         border-bottom: none;
@@ -182,6 +189,12 @@
       overflow: hidden;
 
       padding: 0;
+    }
+
+    @media (max-width: 600px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
