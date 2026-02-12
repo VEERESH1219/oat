@@ -9,7 +9,7 @@ Fully semantic, zero-Javascript, dynamic dialog with `<dialog>`. Use `commandfor
 {% demo() %}
 ```html
 <button commandfor="demo-dialog" command="show-modal">Open dialog</button>
-<dialog id="demo-dialog">
+<dialog id="demo-dialog" closedby="any">
   <form method="dialog">
     <header>
       <h3>Title</h3>
