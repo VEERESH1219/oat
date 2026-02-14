@@ -12,7 +12,7 @@
 
   <script>
     // Prevent FOUC - apply theme before rendering.
-    (function() {
+    (function () {
       var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       document.documentElement.setAttribute('data-theme', t);
     })();
@@ -29,16 +29,19 @@
         .favicon {
           display: inline-block;
         }
+
         .logo {
           display: none;
         }
       }
     }
+
     body:not(.home) {
       nav[data-topnav] {
         .favicon {
           display: none;
         }
+
         .logo {
           display: inline-block;
         }
@@ -69,6 +72,7 @@
         align-items: center;
         gap: var(--space-2);
       }
+
       .favicon {
         line-height: 1;
       }
@@ -80,12 +84,15 @@
 
     .intro {
       margin-bottom: var(--space-12);
+
       .logo img {
         max-height: 60px;
       }
+
       .title {
         margin-bottom: var(--space-2);
       }
+
       .slogan {
         margin: 0 0 var(--space-12) 0;
         font-weight: normal;
@@ -103,15 +110,18 @@
       .logo {
         border-bottom: none;
         padding-bottom: var(--space-4);
+
         img {
           max-height: 40px;
         }
       }
+
       nav sup {
         color: var(--muted-foreground);
         font-size: var(--text-8);
         margin-left: var(--space-1);
       }
+
       footer button {
         width: 100%;
       }
@@ -159,6 +169,7 @@
 
     .demo-grid {
       gap: var(--space-2);
+
       [class*="col-"] {
         background: var(--primary);
         color: var(--primary-foreground);
@@ -176,6 +187,7 @@
     html[data-theme="dark"] .icon-dark {
       display: none;
     }
+
     html:not([data-theme="dark"]) .icon-light {
       display: none;
     }
@@ -211,6 +223,30 @@
       .features {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Copy button styles */
+    pre {
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 4px 8px;
+      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .copy-btn:hover {
+      opacity: 1;
+      background: var(--secondary);
     }
   </style>
 </head>
@@ -256,7 +292,8 @@
               {% set components = get_section(path="components/_index.md") %}
               {% for page in components.pages %}
               <li><a href="/components/#{{ page.slug }}">{{ page.title }}
-                {% if page.extra.webcomponent | default(value=false) %}<sup title="WebComponent">WC</sup>{% endif %}</a></li>
+                  {% if page.extra.webcomponent | default(value=false) %}<sup title="WebComponent">WC</sup>{% endif
+                  %}</a></li>
               {% endfor %}
             </ul>
           </details>
@@ -265,16 +302,22 @@
     </nav>
     <footer>
       <button class="outline small" onclick="toggleTheme()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-light">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          class="icon-light">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
 
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-dark">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          class="icon-dark">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
 
         Switch theme
@@ -286,8 +329,10 @@
     <div class="container">
       {% block content %}{% endblock %}
 
-      <footer class="footer text-light">&copy; <a href="https://nadh.in"><small class="text-light">Kailash Nadh</small></a></footer>
+      <footer class="footer text-light">&copy; <a href="https://nadh.in"><small class="text-light">Kailash
+            Nadh</small></a></footer>
     </div>
   </main>
 </body>
+
 </html>
